@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROS Stereo Vision - Jakson Almeida Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            padding-top: 80px;
+        }
+        .project-hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .project-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: var(--text-primary);
+        }
+        .project-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .project-section {
+            padding: 4rem 0;
+        }
+        .project-section:nth-child(even) {
+            background-color: var(--bg-secondary);
+        }
+        .project-overview {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .project-meta {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            position: sticky;
+            top: 100px;
+        }
+        .meta-item {
+            margin-bottom: 1.5rem;
+        }
+        .meta-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .meta-value {
+            color: var(--text-secondary);
+        }
+        .back-to-projects {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: var(--bg-secondary);
+        }
+        @media (max-width: 768px) {
+            .project-overview {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .project-meta {
+                position: static;
+            }
+            .project-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="../index.html" style="text-decoration: none; color: inherit;">Jakson Almeida</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1 class="project-title">ROS Stereo Vision</h1>
+            <p class="project-subtitle">A ROS-based stereo vision system designed for tennis ball tracking and analysis</p>
+            <div class="project-links">
+                <a href="https://github.com/Jakson-Almeida/ROS-Stereo-Vision-UFJF" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i>
+                    View on GitHub
+                </a>
+                <a href="../index.html#projects" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-overview">
+                <div class="overview-content">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p>
+                        This ROS-based stereo vision system was developed for tennis ball tracking and analysis, 
+                        demonstrating advanced computer vision techniques in robotics applications. The system 
+                        utilizes stereo cameras to provide depth perception and real-time object detection capabilities.
+                    </p>
+                    <p>
+                        The project implements sophisticated computer vision algorithms including object detection, 
+                        tracking, and 3D position estimation. It's designed to work within the Robot Operating 
+                        System (ROS) framework, making it easily integrable with other robotic systems and 
+                        applications.
+                    </p>
+                    <p>
+                        The system can track tennis balls in real-time, providing position data, velocity 
+                        estimation, and trajectory prediction. This makes it suitable for sports analysis, 
+                        robotic tennis applications, or any scenario requiring precise object tracking in 3D space.
+                    </p>
+                    
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Key Features:</h3>
+                    <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
+                        <li>Real-time stereo vision processing</li>
+                        <li>Tennis ball detection and tracking</li>
+                        <li>3D position estimation</li>
+                        <li>Trajectory prediction</li>
+                        <li>ROS integration</li>
+                        <li>OpenCV-based computer vision</li>
+                    </ul>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Language</span>
+                        <span class="meta-value">Python</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Computer Vision</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Application</span>
+                        <span class="meta-value">Sports Analysis</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">License</span>
+                        <span class="meta-value">MIT</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Technologies</span>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ROS</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Stereo Vision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Applications & Use Cases</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-table-tennis"></i> Sports Analysis</h3>
+                    </div>
+                    <p class="project-description">
+                        Tennis ball tracking for performance analysis, coaching, and automated 
+                        sports statistics collection.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-robot"></i> Robotic Applications</h3>
+                    </div>
+                    <p class="project-description">
+                        Integration with robotic systems for automated ball collection, 
+                        training robots, or interactive games.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-eye"></i> Computer Vision Research</h3>
+                    </div>
+                    <p class="project-description">
+                        Platform for testing and developing new computer vision algorithms 
+                        for object tracking and 3D reconstruction.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    </div>
+                    <p class="project-description">
+                        Educational tool for teaching computer vision, robotics, and 
+                        stereo vision concepts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Projects -->
+    <section class="back-to-projects">
+        <div class="container">
+            <a href="../index.html#projects" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i>
+                Back to All Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Jakson Almeida. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Jakson-Almeida" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/jakson-da-rocha-almeida-2b3861153" target="_blank">LinkedIn</a>
+                <a href="https://youtube.com/@jaksonalmeida4409" target="_blank">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
