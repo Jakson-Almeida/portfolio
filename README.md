@@ -1,1 +1,22 @@
-# Jakson Almeida - Portfolio Website\n\nA modern portfolio website with individual project pages.\n\n## Features\n- Dark/Light theme toggle (Dark default)\n- Responsive design\n- Individual project pages\n- Contact form\n\n## Projects\n- RNN-Cpp\n- Follow-Line-Simulator\n- ROS Stereo Vision\n- PX4 Firmware\n- RNN Processing AI\n\nEach project has its own detailed page in the projects/ folder.
+# Jakson Almeida 
+
+- Portfolio Website
+
+A modern portfolio website with individual project pages.
+
+## Features
+
+- Dark/Light theme toggle (Dark default)
+- Responsive design
+- Individual project pages
+- Contact form
+
+## Projects
+
+- RNN-Cpp
+- Follow-Line-Simulator
+- ROS Stereo Vision
+- PX4 Firmware
+- RNN Processing AI
+
+Each project has its own detailed page in the ```projects/``` folder.
