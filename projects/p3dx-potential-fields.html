@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3DX Potential Fields Navigation - Jakson Almeida Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            padding-top: 80px;
+        }
+        .project-hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .project-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: var(--text-primary);
+        }
+        .project-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .project-section {
+            padding: 4rem 0;
+        }
+        .project-section:nth-child(even) {
+            background-color: var(--bg-secondary);
+        }
+        .project-overview {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .project-meta {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            position: sticky;
+            top: 100px;
+        }
+        .meta-item {
+            margin-bottom: 1.5rem;
+        }
+        .meta-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .meta-value {
+            color: var(--text-secondary);
+        }
+        .back-to-projects {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: var(--bg-secondary);
+        }
+        @media (max-width: 768px) {
+            .project-overview {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .project-meta {
+                position: static;
+            }
+            .project-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="../index.html" style="text-decoration: none; color: inherit;">Jakson Almeida</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1 class="project-title">P3DX Potential Fields Navigation</h1>
+            <p class="project-subtitle">ROS package for autonomous navigation of Pioneer P3-DX robot using potential fields algorithm in Gazebo simulation</p>
+            <div class="project-links">
+                <a href="https://github.com/Jakson-Almeida/p3dx_potential_fields" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i>
+                    View on GitHub
+                </a>
+                <a href="../index.html#projects" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-overview">
+                <div class="overview-content">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p>
+                        This project implements an autonomous navigation system for the Pioneer P3-DX robot using 
+                        the potential fields algorithm. The system enables the robot to navigate through complex 
+                        environments while avoiding obstacles and reaching specified goals autonomously.
+                    </p>
+                    <p>
+                        The potential fields approach creates attractive forces toward the goal and repulsive 
+                        forces away from obstacles, resulting in smooth and efficient navigation paths. The 
+                        implementation includes real-time visualization tools and interactive goal setting 
+                        capabilities.
+                    </p>
+                    <p>
+                        The project demonstrates advanced robotics concepts including autonomous navigation, 
+                        obstacle avoidance, and real-time path planning. It's built using ROS (Robot Operating System) 
+                        and integrates with Gazebo simulation environment for testing and validation.
+                    </p>
+                    
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Key Features:</h3>
+                    <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
+                        <li>Autonomous obstacle avoidance using potential fields</li>
+                        <li>Real-time path planning and navigation</li>
+                        <li>Interactive goal setting via terminal</li>
+                        <li>Real-time visualization tools</li>
+                        <li>Gazebo simulation integration</li>
+                        <li>Customizable algorithm parameters</li>
+                    </ul>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Language</span>
+                        <span class="meta-value">Python</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Robotics & AI</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Application</span>
+                        <span class="meta-value">Autonomous Navigation</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">License</span>
+                        <span class="meta-value">MIT</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Technologies</span>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ROS</span>
+                            <span class="tech-tag">Gazebo</span>
+                            <span class="tech-tag">Robotics</span>
+                            <span class="tech-tag">Autonomous Navigation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Technical Implementation</h2>
+            
+            <div class="overview-content">
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Core Algorithm</h3>
+                <p>
+                    The potential fields algorithm creates two types of forces:
+                </p>
+                <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
+                    <li><strong>Attractive Force:</strong> Pulls the robot toward the goal position</li>
+                    <li><strong>Repulsive Force:</strong> Pushes the robot away from detected obstacles</li>
+                </ul>
+                <p>
+                    The resulting force vector determines the robot's movement direction and velocity.
+                </p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">System Architecture</h3>
+                <p>
+                    The system follows a modular architecture with three main components:
+                </p>
+                <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
+                    <li><strong>Sensor Input:</strong> Laser scan data and odometry from the robot</li>
+                    <li><strong>Potential Fields:</strong> Force calculation algorithm for navigation</li>
+                    <li><strong>Motion Control:</strong> Velocity commands sent to the robot</li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Key Parameters</h3>
+                <p>
+                    The algorithm can be tuned using several configurable parameters:
+                </p>
+                <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
+                    <li><strong>K_att:</strong> Attractive force gain - controls how strongly the robot is pulled toward the goal</li>
+                    <li><strong>K_rep:</strong> Repulsive force gain - controls how strongly the robot avoids obstacles</li>
+                    <li><strong>epsilon_0:</strong> Obstacle influence distance - determines how far obstacles affect the robot</li>
+                    <li><strong>v_max:</strong> Maximum linear velocity - limits the robot's forward/backward speed</li>
+                    <li><strong>omega_max:</strong> Maximum angular velocity - limits the robot's turning speed</li>
+                    <li><strong>tol:</strong> Goal tolerance distance - how close the robot must get to reach the goal</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Instructions -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Usage Instructions</h2>
+            
+            <div class="overview-content">
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">1. Basic Simulation</h3>
+                <p>
+                    Launch the Gazebo simulation with potential fields navigation:
+                </p>
+                <div style="background-color: var(--bg-tertiary); padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; border: 1px solid var(--border-color); font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; color: var(--text-primary);">
+                    <code>roslaunch p3dx_potential_fields p3dx_world.launch</code>
+                </div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">2. Start Potential Fields</h3>
+                <p>
+                    In a new terminal, start the potential fields algorithm:
+                </p>
+                <div style="background-color: var(--bg-tertiary); padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; border: 1px solid var(--border-color); font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; color: var(--text-primary);">
+                    <code>rosrun p3dx_potential_fields p3dx_potential_field.py</code>
+                </div>
+                <p>Enter goal coordinates when prompted in the terminal.</p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">3. Visualization</h3>
+                <p>
+                    Start the visualization tool in another terminal:
+                </p>
+                <div style="background-color: var(--bg-tertiary); padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; border: 1px solid var(--border-color); font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; color: var(--text-primary);">
+                    <code>rosrun p3dx_potential_fields p3dx_view.py</code>
+                </div>
+                <p>In the visualization window:</p>
+                <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
+                    <li>Press <strong>SPACE</strong> to clear the visualization</li>
+                    <li>Use mouse scroll to zoom in/out</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROS Nodes -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">ROS Nodes</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-cogs"></i> p3dx_potential_field.py</h3>
+                    </div>
+                    <p class="project-description">
+                        Main node implementing the potential field algorithm. Subscribes to robot pose and laser data, 
+                        publishes velocity commands for autonomous navigation.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Subscribes to: /RosAria/odom, /RosAria/laser/scan</span>
+                        <span class="tech-tag">Publishes to: /RosAria/cmd_vel</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-eye"></i> p3dx_view.py</h3>
+                    </div>
+                    <p class="project-description">
+                        Visualization tool for monitoring robot behavior in real-time. Displays robot position, 
+                        obstacles, and navigation trajectory.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Robot position (blue)</span>
+                        <span class="tech-tag">Obstacles (red)</span>
+                        <span class="tech-tag">Trajectory (green)</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-code"></i> potential_fields_and_visualization.py</h3>
+                    </div>
+                    <p class="project-description">
+                        Combined algorithm and visualization implementation with interactive goal input 
+                        via terminal for comprehensive testing and demonstration.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Potential field algorithm</span>
+                        <span class="tech-tag">Real-time visualization</span>
+                        <span class="tech-tag">Interactive goal input</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Customization Options</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-globe"></i> World Modification</h3>
+                    </div>
+                    <p class="project-description">
+                        To change the simulation environment, modify the world files and update launch configurations 
+                        to create different testing scenarios and environments.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Modify worlds/mundo_corredor.world</span>
+                        <span class="tech-tag">Update launch file paths</span>
+                        <span class="tech-tag">Add/remove obstacles</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-sliders-h"></i> Algorithm Tuning</h3>
+                    </div>
+                    <p class="project-description">
+                        Optimize performance by adjusting algorithm parameters for different environments 
+                        and robot capabilities.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Edit p3dx_potential_field.py</span>
+                        <span class="tech-tag">Adjust force gains</span>
+                        <span class="tech-tag">Modify velocity limits</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Projects -->
+    <section class="back-to-projects">
+        <div class="container">
+            <a href="../index.html#projects" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i>
+                Back to All Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Jakson Almeida. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Jakson-Almeida" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/jakson-da-rocha-almeida-2b3861153" target="_blank">LinkedIn</a>
+                <a href="https://youtube.com/@jaksonalmeida4409" target="_blank">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 
