@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROS Stereo Vision - Jakson Almeida Portfolio</title>
+    <title>PX4 Drone Autopilot - Jakson Almeida Portfolio</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -75,6 +75,60 @@
             padding: 3rem 0;
             background-color: var(--bg-secondary);
         }
+        .badges {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .badge {
+            padding: 0.5rem 1rem;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .badge:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        .hardware-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .hardware-category {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+        }
+        .hardware-category h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .hardware-list {
+            list-style: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .hardware-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .hardware-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
         @media (max-width: 768px) {
             .project-overview {
                 grid-template-columns: 1fr;
@@ -85,6 +139,9 @@
             }
             .project-title {
                 font-size: 2.5rem;
+            }
+            .badges {
+                flex-direction: column;
             }
         }
     </style>
@@ -126,10 +183,27 @@
     <!-- Project Hero Section -->
     <section class="project-hero">
         <div class="project-hero-content">
-            <h1 class="project-title">ROS Stereo Vision</h1>
-            <p class="project-subtitle">A ROS-based stereo vision system designed for tennis ball tracking and analysis</p>
+            <h1 class="project-title">PX4 Drone Autopilot</h1>
+            <p class="project-subtitle">Professional-grade flight control solution for drones and autonomous vehicles</p>
+            
+            <!-- Badges -->
+            <div class="badges">
+                <a href="https://github.com/PX4/Firmware/releases" target="_blank" class="badge">
+                    <i class="fas fa-download"></i> Releases
+                </a>
+                <a href="https://zenodo.org/badge/latestdoi/22634/PX4/Firmware" target="_blank" class="badge">
+                    <i class="fas fa-award"></i> DOI
+                </a>
+                <a href="http://ci.px4.io:8080/blue/organizations/jenkins/PX4%2FFirmware/activity" target="_blank" class="badge">
+                    <i class="fas fa-code-branch"></i> Build Status
+                </a>
+                <a href="http://slack.px4.io" target="_blank" class="badge">
+                    <i class="fab fa-slack"></i> Slack
+                </a>
+            </div>
+            
             <div class="project-links">
-                <a href="https://github.com/Jakson-Almeida/ROS-Stereo-Vision-UFJF" target="_blank" class="btn btn-primary">
+                <a href="https://github.com/Jakson-Almeida/Firmware" target="_blank" class="btn btn-primary">
                     <i class="fab fa-github"></i>
                     View on GitHub
                 </a>
@@ -148,57 +222,50 @@
                 <div class="overview-content">
                     <h2 class="section-title">Project Overview</h2>
                     <p>
-                        This ROS-based stereo vision system was developed for tennis ball tracking and analysis, 
-                        demonstrating advanced computer vision techniques in robotics applications. The system 
-                        utilizes stereo cameras to provide depth perception and real-time object detection capabilities.
+                        This repository holds the <a href="http://px4.io" target="_blank" style="color: var(--primary-color);">PX4</a> flight control solution for drones, with the main applications located in the <code>src/modules</code> directory. It also contains the PX4 Drone Middleware Platform, which provides drivers and middleware to run drones.
                     </p>
                     <p>
-                        The project implements sophisticated computer vision algorithms including object detection, 
-                        tracking, and 3D position estimation. It's designed to work within the Robot Operating 
-                        System (ROS) framework, making it easily integrable with other robotic systems and 
-                        applications.
+                        PX4 is a professional-grade, open-source flight control solution that supports a wide range of airframes including multicopters, fixed-wing aircraft, VTOL vehicles, and experimental types like rovers, blimps, boats, and submarines.
                     </p>
                     <p>
-                        The system can track tennis balls in real-time, providing position data, velocity 
-                        estimation, and trajectory prediction. This makes it suitable for sports analysis, 
-                        robotic tennis applications, or any scenario requiring precise object tracking in 3D space.
+                        The platform is designed for both users and developers, offering comprehensive documentation, active community support, and continuous development through weekly dev calls and collaborative development processes.
                     </p>
                     
                     <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Key Features:</h3>
                     <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
-                        <li>Real-time stereo vision processing</li>
-                        <li>Tennis ball detection and tracking</li>
-                        <li>3D position estimation</li>
-                        <li>Trajectory prediction</li>
-                        <li>ROS integration</li>
-                        <li>OpenCV-based computer vision</li>
+                        <li>Professional-grade flight control for multiple airframe types</li>
+                        <li>Comprehensive middleware platform with drivers</li>
+                        <li>Active development community with weekly dev calls</li>
+                        <li>Extensive hardware support and documentation</li>
+                        <li>Open-source BSD 3-clause license</li>
+                        <li>Continuous integration and testing</li>
                     </ul>
                 </div>
                 <div class="project-meta">
                     <div class="meta-item">
                         <span class="meta-label">Language</span>
-                        <span class="meta-value">Python</span>
+                        <span class="meta-value">C++</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Category</span>
-                        <span class="meta-value">Computer Vision</span>
+                        <span class="meta-value">Flight Control</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Application</span>
-                        <span class="meta-value">Sports Analysis</span>
+                        <span class="meta-value">Drone Autopilot</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">License</span>
-                        <span class="meta-value">MIT</span>
+                        <span class="meta-value">BSD 3-clause</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Technologies</span>
                         <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">ROS</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Stereo Vision</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Flight Control</span>
+                            <span class="tech-tag">UAV</span>
+                            <span class="tech-tag">Middleware</span>
+                            <span class="tech-tag">Drivers</span>
                         </div>
                     </div>
                 </div>
@@ -206,45 +273,149 @@
         </div>
     </section>
 
-    <!-- Applications -->
+    <!-- Supported Airframes -->
     <section class="project-section">
         <div class="container">
-            <h2 class="section-title">Applications & Use Cases</h2>
+            <h2 class="section-title">Supported Airframes</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-table-tennis"></i> Sports Analysis</h3>
+                        <h3><i class="fas fa-helicopter"></i> Multicopters</h3>
                     </div>
                     <p class="project-description">
-                        Tennis ball tracking for performance analysis, coaching, and automated 
-                        sports statistics collection.
+                        Support for various multicopter configurations including quadcopters, hexacopters, 
+                        and octocopters with advanced flight control algorithms.
                     </p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-robot"></i> Robotic Applications</h3>
+                        <h3><i class="fas fa-plane"></i> Fixed Wing</h3>
                     </div>
                     <p class="project-description">
-                        Integration with robotic systems for automated ball collection, 
-                        training robots, or interactive games.
+                        Fixed-wing aircraft support with efficient flight modes, navigation, 
+                        and autonomous mission planning capabilities.
                     </p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-eye"></i> Computer Vision Research</h3>
+                        <h3><i class="fas fa-rocket"></i> VTOL</h3>
                     </div>
                     <p class="project-description">
-                        Platform for testing and developing new computer vision algorithms 
-                        for object tracking and 3D reconstruction.
+                        Vertical Take-Off and Landing vehicles combining the benefits of 
+                        both multicopter and fixed-wing capabilities.
                     </p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <h3><i class="fas fa-cog"></i> Experimental Types</h3>
                     </div>
                     <p class="project-description">
-                        Educational tool for teaching computer vision, robotics, and 
-                        stereo vision concepts.
+                        Support for innovative vehicle types including rovers, blimps, 
+                        boats, submarines, and other experimental platforms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Hardware -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Supported Hardware</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                PX4 supports a wide range of flight controller boards and hardware platforms:
+            </p>
+            
+            <div class="hardware-grid">
+                <div class="hardware-category">
+                    <h4>FMUv2 Series</h4>
+                    <ul class="hardware-list">
+                        <li>Pixhawk</li>
+                        <li>Pixfalcon</li>
+                    </ul>
+                </div>
+                
+                <div class="hardware-category">
+                    <h4>FMUv3 Series</h4>
+                    <ul class="hardware-list">
+                        <li>Pixhawk 2</li>
+                        <li>Pixhawk Mini</li>
+                        <li>CUAV Pixhack v3</li>
+                    </ul>
+                </div>
+                
+                <div class="hardware-category">
+                    <h4>FMUv4 Series</h4>
+                    <ul class="hardware-list">
+                        <li>Pixracer</li>
+                        <li>Pixhawk 3 Pro</li>
+                    </ul>
+                </div>
+                
+                <div class="hardware-category">
+                    <h4>FMUv5 Series (ARM Cortex M7)</h4>
+                    <ul class="hardware-list">
+                        <li>Pixhawk 4</li>
+                        <li>Pixhawk 4 mini</li>
+                        <li>CUAV V5+</li>
+                        <li>CUAV V5 nano</li>
+                    </ul>
+                </div>
+                
+                <div class="hardware-category">
+                    <h4>Other Platforms</h4>
+                    <ul class="hardware-list">
+                        <li>Snapdragon Flight</li>
+                        <li>Intel Aero</li>
+                        <li>Raspberry PI with Navio 2</li>
+                        <li>BeagleBone Blue</li>
+                        <li>Holybro Durandal</li>
+                        <li>Holybro Kakute F7</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development & Community -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Development & Community</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-users"></i> Weekly Dev Call</h3>
+                    </div>
+                    <p class="project-description">
+                        Open weekly development calls for all interested developers, including QA sessions 
+                        for newcomers and ongoing platform development discussions.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-book"></i> Comprehensive Documentation</h3>
+                    </div>
+                    <p class="project-description">
+                        Extensive user and developer guides, contribution guidelines, and 
+                        community support through forums and chat platforms.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-code"></i> Open Source</h3>
+                    </div>
+                    <p class="project-description">
+                        Fully open-source platform with BSD 3-clause license, encouraging 
+                        community contributions and collaborative development.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-tools"></i> Development Tools</h3>
+                    </div>
+                    <p class="project-description">
+                        Continuous integration, testing frameworks, and development tools 
+                        for building and testing flight control software.
                     </p>
                 </div>
             </div>
@@ -275,5 +446,4 @@
 
     <script src="../script.js"></script>
 </body>
-</html>
-
+</html> 
