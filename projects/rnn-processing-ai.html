@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROS Stereo Vision - Jakson Almeida Portfolio</title>
+    <title>RNN Processing AI - Jakson Almeida Portfolio</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -75,6 +75,22 @@
             padding: 3rem 0;
             background-color: var(--bg-secondary);
         }
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .highlight-box h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .highlight-box p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
         @media (max-width: 768px) {
             .project-overview {
                 grid-template-columns: 1fr;
@@ -126,10 +142,20 @@
     <!-- Project Hero Section -->
     <section class="project-hero">
         <div class="project-hero-content">
-            <h1 class="project-title">ROS Stereo Vision</h1>
-            <p class="project-subtitle">A ROS-based stereo vision system designed for tennis ball tracking and analysis</p>
+            <h1 class="project-title">RNN Processing AI</h1>
+            <p class="project-subtitle">Complete Recurrent Neural Network library for Processing 4, developed from scratch with custom linear algebra and matrix calculus</p>
+            
+            <!-- Highlight Box -->
+            <div class="highlight-box">
+                <h3><i class="fas fa-star"></i> 100% From Scratch Development</h3>
+                <p>
+                    This entire library was developed by me from the ground up, including the linear algebra engine, 
+                    matrix calculus operations, and complete RNN architecture implementation.
+                </p>
+            </div>
+            
             <div class="project-links">
-                <a href="https://github.com/Jakson-Almeida/ROS-Stereo-Vision-UFJF" target="_blank" class="btn btn-primary">
+                <a href="https://github.com/Jakson-Almeida/RNN-Processing4-AI" target="_blank" class="btn btn-primary">
                     <i class="fab fa-github"></i>
                     View on GitHub
                 </a>
@@ -148,60 +174,107 @@
                 <div class="overview-content">
                     <h2 class="section-title">Project Overview</h2>
                     <p>
-                        This ROS-based stereo vision system was developed for tennis ball tracking and analysis, 
-                        demonstrating advanced computer vision techniques in robotics applications. The system 
-                        utilizes stereo cameras to provide depth perception and real-time object detection capabilities.
+                        <strong>RNN Processing AI</strong> is a comprehensive Recurrent Neural Network library specifically designed for Processing 4, 
+                        representing a complete implementation developed entirely from scratch. This project demonstrates deep understanding 
+                        of neural network fundamentals, mathematical foundations, and software architecture principles.
                     </p>
                     <p>
-                        The project implements sophisticated computer vision algorithms including object detection, 
-                        tracking, and 3D position estimation. It's designed to work within the Robot Operating 
-                        System (ROS) framework, making it easily integrable with other robotic systems and 
-                        applications.
+                        Unlike using existing libraries, I built every component from the ground up: the linear algebra engine for matrix operations, 
+                        the complete matrix calculus system for backpropagation, and the entire RNN architecture with forward and backward passes. 
+                        This approach ensures optimal performance for Processing 4 applications while providing full control over the implementation.
                     </p>
                     <p>
-                        The system can track tennis balls in real-time, providing position data, velocity 
-                        estimation, and trajectory prediction. This makes it suitable for sports analysis, 
-                        robotic tennis applications, or any scenario requiring precise object tracking in 3D space.
+                        The library is designed to be both educational and practical, making it perfect for understanding neural network internals, 
+                        experimenting with different architectures, and building AI applications within the Processing creative coding environment.
                     </p>
                     
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Key Features:</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Core Components Developed:</h3>
                     <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
-                        <li>Real-time stereo vision processing</li>
-                        <li>Tennis ball detection and tracking</li>
-                        <li>3D position estimation</li>
-                        <li>Trajectory prediction</li>
-                        <li>ROS integration</li>
-                        <li>OpenCV-based computer vision</li>
+                        <li><strong>Linear Algebra Engine:</strong> Complete matrix operations, vector calculations, and mathematical foundations</li>
+                        <li><strong>Matrix Calculus System:</strong> Custom implementation of gradients, derivatives, and backpropagation</li>
+                        <li><strong>RNN Architecture:</strong> Full recurrent neural network with customizable layers and activation functions</li>
+                        <li><strong>Training Algorithms:</strong> PSO (Particle Swarm Optimization) and Genetic Algorithm optimization</li>
+                        <li><strong>Processing 4 Integration:</strong> Seamless integration with Processing's creative coding environment</li>
+                        <li><strong>Performance Optimization:</strong> Efficient algorithms designed for real-time applications</li>
                     </ul>
                 </div>
                 <div class="project-meta">
                     <div class="meta-item">
                         <span class="meta-label">Language</span>
-                        <span class="meta-value">Python</span>
+                        <span class="meta-value">Processing (Java)</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Category</span>
-                        <span class="meta-value">Computer Vision</span>
+                        <span class="meta-value">AI & Machine Learning</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Application</span>
-                        <span class="meta-value">Sports Analysis</span>
+                        <span class="meta-value">Neural Network Library</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">License</span>
                         <span class="meta-value">MIT</span>
                     </div>
                     <div class="meta-item">
+                        <span class="meta-label">Development</span>
+                        <span class="meta-value">100% From Scratch</span>
+                    </div>
+                    <div class="meta-item">
                         <span class="meta-label">Technologies</span>
                         <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">ROS</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Stereo Vision</span>
+                            <span class="tech-tag">Processing 4</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Linear Algebra</span>
+                            <span class="tech-tag">Matrix Calculus</span>
+                            <span class="tech-tag">RNN</span>
+                            <span class="tech-tag">Neural Networks</span>
+                            <span class="tech-tag">PSO</span>
+                            <span class="tech-tag">Genetic Algorithm</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Technical Implementation</h2>
+            
+            <div class="overview-content">
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Linear Algebra Engine</h3>
+                <p>
+                    I implemented a complete linear algebra system from scratch, including matrix operations, vector calculations, 
+                    and mathematical foundations. This includes matrix multiplication, addition, subtraction, transposition, 
+                    and specialized operations needed for neural network computations.
+                </p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Matrix Calculus System</h3>
+                <p>
+                    The matrix calculus implementation handles all the mathematical operations required for neural network training, 
+                    including gradient calculations, partial derivatives, and the complete backpropagation algorithm. This was built 
+                    without relying on external mathematical libraries.
+                </p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">RNN Architecture</h3>
+                <p>
+                    The complete RNN architecture includes forward pass computation, hidden state management, and backward pass 
+                    for training. The system supports customizable layer sizes, activation functions, and training parameters.
+                </p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Training Algorithms</h3>
+                <p>
+                    The library implements advanced optimization algorithms including <strong>PSO (Particle Swarm Optimization)</strong> 
+                    and <strong>Genetic Algorithms</strong> for training the neural networks. These evolutionary algorithms are particularly 
+                    effective for complex optimization problems and have been successfully applied in robotics applications.
+                </p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Performance Optimization</h3>
+                <p>
+                    Every algorithm was designed with performance in mind, ensuring efficient computation for real-time applications 
+                    in Processing 4. The implementation avoids unnecessary memory allocations and optimizes mathematical operations.
+                </p>
             </div>
         </div>
     </section>
@@ -213,39 +286,97 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-table-tennis"></i> Sports Analysis</h3>
+                        <h3><i class="fas fa-graduation-cap"></i> Education & Learning</h3>
                     </div>
                     <p class="project-description">
-                        Tennis ball tracking for performance analysis, coaching, and automated 
-                        sports statistics collection.
+                        Perfect for understanding neural network internals, mathematical foundations, 
+                        and AI principles through hands-on experimentation.
                     </p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-robot"></i> Robotic Applications</h3>
+                        <h3><i class="fas fa-palette"></i> Creative AI Applications</h3>
                     </div>
                     <p class="project-description">
-                        Integration with robotic systems for automated ball collection, 
-                        training robots, or interactive games.
+                        Build interactive AI art, music generation, pattern recognition, 
+                        and other creative applications within Processing 4.
                     </p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-eye"></i> Computer Vision Research</h3>
+                        <h3><i class="fas fa-flask"></i> Research & Experimentation</h3>
                     </div>
                     <p class="project-description">
-                        Platform for testing and developing new computer vision algorithms 
-                        for object tracking and 3D reconstruction.
+                        Platform for testing new neural network architectures, training methods, 
+                        and AI algorithms in a controlled environment.
                     </p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <h3><i class="fas fa-code"></i> Custom AI Development</h3>
                     </div>
                     <p class="project-description">
-                        Educational tool for teaching computer vision, robotics, and 
-                        stereo vision concepts.
+                        Foundation for building specialized AI applications, custom neural networks, 
+                        and domain-specific machine learning solutions.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Development Process</h2>
+            <div class="overview-content">
+                <p>
+                    This project represents a complete journey from mathematical theory to practical implementation. 
+                    I started with the fundamental mathematical concepts of linear algebra and calculus, then designed 
+                    efficient algorithms for each operation, and finally implemented everything in Processing 4's Java environment.
+                </p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Key Development Phases:</h3>
+                <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
+                    <li><strong>Mathematical Foundation:</strong> Understanding and implementing linear algebra and calculus operations</li>
+                    <li><strong>Algorithm Design:</strong> Creating efficient algorithms for matrix operations and neural network computations</li>
+                    <li><strong>Core Implementation:</strong> Building the linear algebra engine and matrix calculus system</li>
+                    <li><strong>RNN Architecture:</strong> Implementing the complete recurrent neural network structure</li>
+                    <li><strong>Processing Integration:</strong> Adapting the library for Processing 4's creative coding environment</li>
+                    <li><strong>Testing & Optimization:</strong> Ensuring accuracy and performance across various use cases</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Application -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="section-title">Practical Application: Follow-Line Simulator</h2>
+            <div class="overview-content">
+                <p>
+                    This RNN library was successfully applied in the <a href="follow-line-simulator.html" style="color: var(--primary-color);">Follow-Line Simulator</a> project, 
+                    demonstrating its real-world effectiveness in robotics applications. The combination of the RNN architecture 
+                    with PSO optimization enabled a robot to learn line-following behavior autonomously.
+                </p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">How It Works:</h3>
+                <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem;">
+                    <li><strong>RNN Processing:</strong> The neural network processes visual input from the robot's sensors</li>
+                    <li><strong>PSO Optimization:</strong> Particle Swarm Optimization trains the network weights for optimal performance</li>
+                    <li><strong>Learning Process:</strong> The robot gradually learns to follow lines through iterative training</li>
+                    <li><strong>Real-time Adaptation:</strong> The system adapts to different track layouts and conditions</li>
+                </ul>
+                
+                <p style="margin-top: 2rem;">
+                    This practical application showcases the library's capabilities in real-world robotics scenarios, 
+                    proving that a from-scratch implementation can achieve professional-grade results in autonomous navigation.
+                </p>
+                
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="follow-line-simulator.html" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Follow-Line Simulator Project
+                    </a>
                 </div>
             </div>
         </div>
@@ -275,4 +406,4 @@
 
     <script src="../script.js"></script>
 </body>
-</html>
+</html> 
