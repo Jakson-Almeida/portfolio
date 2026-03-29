@@ -93,10 +93,14 @@ contactForm.addEventListener('submit', function(e) {
         showNotification('Please enter a valid email address.', 'error');
         return;
     }
-    
-    // Simulate form submission
-    showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-    contactForm.reset();
+
+    const to = 'jakson.almeida@estudante.ufjf.br';
+    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+    const body = encodeURIComponent(
+        `Name: ${name}\nReply-to: ${email}\n\n${message}`
+    );
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    showNotification('Your email app should open with your message.', 'success');
 });
 
 // Email validation function
